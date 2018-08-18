@@ -1559,7 +1559,8 @@ input[type="tel"] {
 
 @media all and (min-width: 1400px) {
 	.content-wrapper {
-		margin-left: 530px; } }
+		margin-left: 530px; } 
+}
 
 @media all and (max-width: 1390px) {
 	.panel-cover--collapsed {
@@ -1570,14 +1571,15 @@ input[type="tel"] {
 		z-index: 800;
 		width: 65%;
 		max-width: 800px;
-		margin-left: 35%; }
-		
+		margin-left: 40%; }
+
 	.panel-main__inner {
 		display: table-cell;
 		vertical-align: middle;
 		position: relative;
 		z-index: 800;
 		padding: 0 40px; }
+		
 	.content-wrapper__inner {
 		margin: 0 5%;
 		padding: 50px 0; }
@@ -1711,4 +1713,10 @@ input[type="tel"] {
 
 	.btn, .navigation__item a {
 		display: block;
-		margin-bottom: .4em; } }
+		margin-bottom: .4em; } 
+
+	.content-wrapper__inner {
+		margin: 0 5%;
+		padding: 50px 0; }
+
+}
