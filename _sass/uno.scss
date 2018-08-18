@@ -1563,14 +1563,24 @@ input[type="tel"] {
 
 @media all and (max-width: 1390px) {
 	.panel-cover--collapsed {
-		width: 37%;
+		width: 35%;
 		max-width: none; }
 
 	.content-wrapper {
 		z-index: 800;
-		width: 63%;
+		width: 65%;
 		max-width: 800px;
-		margin-left: 40%; }
+		margin-left: 35%; }
+		
+	.panel-main__inner {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		z-index: 800;
+		padding: 0 40px; }
+	.content-wrapper__inner {
+		margin: 0 5%;
+		padding: 50px 0; }
 }
 
 @media all and (max-width: 1100px) {
