@@ -1579,7 +1579,7 @@ input[type="tel"] {
 		position: relative;
 		z-index: 800;
 		padding: 0 40px; }
-		
+
 	.content-wrapper__inner {
 		margin: 0 5%;
 		padding: 50px 0; }
@@ -1701,6 +1701,11 @@ input[type="tel"] {
 		width: 100%;
 		margin: 0 0 .4em 0; } }
 @media all and (max-width: 340px) {
+	.content-wrapper {
+		width: 90%;
+		max-width: none;
+		margin: 0 auto; }
+
 	.panel-main__inner {
 		padding: 0 5%; }
 
@@ -1714,9 +1719,4 @@ input[type="tel"] {
 	.btn, .navigation__item a {
 		display: block;
 		margin-bottom: .4em; } 
-
-	.content-wrapper__inner {
-		margin: 0 5%;
-		padding: 50px 0; }
-
 }
