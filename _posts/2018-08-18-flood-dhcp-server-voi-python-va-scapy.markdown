@@ -5,11 +5,17 @@ categories: [Python]
 tags: [Python, Scapy, DHCP]
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
+Code này mình viết vừa để học `Python 3` vừa là một phần của project `LANHTTPAttack`. Tuy nhiên code này được viết bằng `Python 2.7`
+Hoạt động tốt nhất với `scapy` 2.3.2
+Code còn rất nhiều lỗi và đặc biệt là thiếu chức năng release IP của các neighbors. Cái này mình sẽ cập nhật sau vì hiện tại `LANHTTPAttack` chưa cần fix mấy lỗi này lắm.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Cách hoạt động của chương trình:
+- Khởi tạo một thread Sniffer đọc tất cả các DHCP Response.
+- Khi sniffer đã chạy, chương trình liên tục tạo gói các DHCP Discover và gửi ra toàn mạng với tốc độ 10 packet/s.
+- Khi sniffer nhận được gói DHCP Offer, nó sẽ tạo gói DHCP Request gửi lại cho DHCP Server (không cần xác thực gì cả).
+- Trong quá trình tạo DHCP Request, thời gian cuối cùng nhận được gói Offer (cũng là thời gian cuối cùng gửi gói Request) sẽ được ghi nhận. Nếu 10 giây sau mà sniffer không nhận được Offer nào nữa - tức là đã cạn kiệt địa chỉ IP, kết thúc quá trình gửi gói Discovery.
 
-Jekyll also offers powerful support for code snippets:
+Github: [https://github.com/daoxuanhung/DHCPExhauster](https://github.com/daoxuanhung/DHCPExhauster)
 
 ``` python
 #/usr/bin/python
@@ -195,17 +201,15 @@ def floodDHCPServer(iface):
         del sniffer
 
 
+def main():
+    floodDHCPServer('eth0')
+    print "Done"
+
 # variables
 last_response_time = datetime.datetime.now()
 
-floodDHCPServer('eth0')
-print "Done"
-
+if __name__ == '__main__':
+    main()
 exit()
 ```
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
