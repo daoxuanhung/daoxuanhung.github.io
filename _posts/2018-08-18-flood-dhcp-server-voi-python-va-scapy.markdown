@@ -5,8 +5,8 @@ categories: [Python]
 tags: [Python, Scapy, DHCP]
 ---
 
-Code này mình viết vừa để học `Python 3` vừa là một phần của project `LANHTTPAttack`. Tuy nhiên code này được viết bằng `Python 2.7`
-Hoạt động tốt nhất với `scapy` 2.3.2
+Code này mình viết vừa để học `Python 3` vừa là một phần của project `LANHTTPAttack`. Tuy nhiên project này được viết bằng `Python 2.7`
+Hoạt động tốt nhất với `scapy 2.3.2`
 Code còn rất nhiều lỗi và đặc biệt là thiếu chức năng release IP của các neighbors. Cái này mình sẽ cập nhật sau vì hiện tại `LANHTTPAttack` chưa cần fix mấy lỗi này lắm.
 
 Cách hoạt động của chương trình:
