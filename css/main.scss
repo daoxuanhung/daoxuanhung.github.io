@@ -15,7 +15,10 @@ pre.highlight code,
 .highlight pre code {
   /*white-space: pre-wrap;*/
   text-aligh: left;
-  background-color:#272822;
+}
+
+div.highlighter-rouge {
+  overflow-x: scroll;
 }
 
 .btn,
