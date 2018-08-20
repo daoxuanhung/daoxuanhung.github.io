@@ -45,7 +45,9 @@ body {
 		display: table; }
 	body:after {
 		clear: both; }
-
+p {
+	text-align: left;
+}
 /*
  * Foundation Icons v 3.0
  * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
