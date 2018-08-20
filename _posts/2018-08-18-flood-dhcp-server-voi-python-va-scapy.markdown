@@ -128,7 +128,10 @@ class DHCPRequestClient():
                             chaddr = mac2str(self.srcmac))
 
         myoptions   = [ ('message-type', 'request'),
-                        ('param_req_list', chr(1), chr(3), chr(6), chr(15), chr(31), chr(33), chr(43), chr(44), chr(46), chr(47), chr(119), chr(121), chr(249), chr(252)),
+                        ('param_req_list', chr(1), chr(3), chr(6), 
+                        chr(15), chr(31), chr(33), chr(43), chr(44), 
+                        chr(46), chr(47), chr(119), chr(121), chr(249), 
+                        chr(252)),
                         ('client_id', chr(1), mac2str(self.srcmac)), # Ethernet
                         ('server_id', self.serverip),
                         ('requested_addr', self.ip),
@@ -163,7 +166,10 @@ class DHCPDiscoverClient():
                             chaddr = mac2str(self.srcmac))
 
         myoptions   = [ ('message-type', 'discover'),
-                        ('param_req_list', chr(1), chr(3), chr(6), chr(15), chr(31), chr(33), chr(43), chr(44), chr(46), chr(47), chr(119), chr(121), chr(249), chr(252)),
+                        ('param_req_list', chr(1), chr(3), chr(6), 
+                        chr(15), chr(31), chr(33), chr(43), chr(44), 
+                        chr(46), chr(47), chr(119), chr(121), chr(249), 
+                        chr(252)),
                         ('client_id', chr(1), mac2str(self.srcmac)), # Ethernet
                         ('hostname', self.hostname),
                         ('end') ]
