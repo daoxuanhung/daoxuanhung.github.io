@@ -1,6 +1,6 @@
 # Site settings
 title: Dao Xuan Hung's Blog
-description: 'Dao Xuan Hung'
+description: 'Dao Xuan Hung - I don't know who am i
 url: 'https://daoxuanhung.github.io'
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
@@ -9,10 +9,10 @@ baseurl: '/'
 author:
   name: 'Dao Xuan Hung'
   email: dao.xuan.hung.175@gmail.com
-  twitter_username: joshgerdes
+  twitter_username: a
   facebook_username: dao.xuan.hung.175
   github_username:  daoxuanhung
-  linkedin_username:  joshgerdes
+  linkedin_username:  a
 
 defaults:
   -
