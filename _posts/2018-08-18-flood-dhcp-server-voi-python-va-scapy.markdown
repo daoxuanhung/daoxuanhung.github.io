@@ -12,8 +12,8 @@ Code còn rất nhiều lỗi và đặc biệt là thiếu chức năng release
 Cách hoạt động của chương trình:
 - Khởi tạo một thread Sniffer đọc tất cả các DHCP Response.
 - Khi sniffer đã chạy, chương trình liên tục tạo gói các DHCP Discover và gửi ra toàn mạng với tốc độ 10 packet/s.
-- Khi sniffer nhận được gói DHCP Offer, nó sẽ tạo gói DHCP Request gửi lại cho DHCP Server (không cần xác thực gì cả).
-- Trong quá trình tạo DHCP Request, thời gian cuối cùng nhận được gói Offer (cũng là thời gian cuối cùng gửi gói Request) sẽ được ghi nhận. Nếu 10 giây sau mà sniffer không nhận được Offer nào nữa - tức là đã cạn kiệt địa chỉ IP, kết thúc quá trình gửi gói Discovery.
+- Khi sniffer nhận được gói DHCP Offer, nó sẽ tạo gói DHCP Request gửi lại cho DHCP Server.
+- Trong quá trình tạo DHCP Request, thời gian cuối cùng nhận được gói Offer sẽ được ghi nhận. Nếu 10 giây sau mà sniffer không nhận được Offer nào nữa - tức là đã cạn kiệt địa chỉ IP, kết thúc quá trình gửi gói Discovery.
 
 Github: [https://github.com/daoxuanhung/DHCPExhauster](https://github.com/daoxuanhung/DHCPExhauster)
 
