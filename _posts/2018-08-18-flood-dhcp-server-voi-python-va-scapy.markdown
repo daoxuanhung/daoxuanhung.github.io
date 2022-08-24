@@ -15,7 +15,7 @@ Cách hoạt động của chương trình:
 - Khi sniffer nhận được gói DHCP Offer, nó sẽ tạo gói DHCP Request gửi lại cho DHCP Server (không cần xác thực gì cả).
 - Trong quá trình tạo DHCP Request, thời gian cuối cùng nhận được gói Offer (cũng là thời gian cuối cùng gửi gói Request) sẽ được ghi nhận. Nếu 10 giây sau mà sniffer không nhận được Offer nào nữa - tức là đã cạn kiệt địa chỉ IP, kết thúc quá trình gửi gói Discovery.
 
-Github: [https://github.com/hungdaoxuan/DHCPExhauster](https://github.com/hungdaoxuan/DHCPExhauster)
+Github: [https://github.com/daoxuanhung/DHCPExhauster](https://github.com/daoxuanhung/DHCPExhauster)
 
 ``` python
 #/usr/bin/python
